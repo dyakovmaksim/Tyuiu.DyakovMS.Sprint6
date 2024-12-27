@@ -45,7 +45,7 @@ namespace Tyuiu.DyakovMS.Sprint6.Task5.V25
 
         private void buttonHelp_DMS_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 4 выполнил студент группы ИИПб-24-1 Дьяков Максик Сергеевич", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Таск 5 выполнил студент группы ИИПб-24-1 Дьяков Максик Сергеевич", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

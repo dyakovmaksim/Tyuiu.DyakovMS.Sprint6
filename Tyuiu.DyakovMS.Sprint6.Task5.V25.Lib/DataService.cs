@@ -10,7 +10,7 @@ namespace Tyuiu.DyakovMS.Sprint6.Task5.V25.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
-                while ((line = Console.ReadLine()) != null)
+                while ((line = reader.ReadLine()) != null)
                 {
                     len++;
                 }
@@ -22,7 +22,7 @@ namespace Tyuiu.DyakovMS.Sprint6.Task5.V25.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
-                while ((line = Console.ReadLine()) != null)
+                while ((line = reader.ReadLine()) != null)
                 {
                     numsArray[index] = Convert.ToDouble(line);
                     index++;
