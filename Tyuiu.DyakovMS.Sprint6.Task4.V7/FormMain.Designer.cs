@@ -135,6 +135,7 @@
             buttonSave_DMS.TabIndex = 2;
             buttonSave_DMS.Text = "Сохранить";
             buttonSave_DMS.UseVisualStyleBackColor = false;
+            buttonSave_DMS.Click += buttonSave_DMS_Click;
             // 
             // buttonHelp_DMS
             // 
@@ -145,6 +146,7 @@
             buttonHelp_DMS.TabIndex = 3;
             buttonHelp_DMS.Text = "Справка";
             buttonHelp_DMS.UseVisualStyleBackColor = false;
+            buttonHelp_DMS.Click += buttonHelp_DMS_Click;
             // 
             // groupBoxResult_DMS
             // 

@@ -38,9 +38,37 @@ namespace Tyuiu.DyakovMS.Sprint6.Task4.V7
                     startStep++;
                 }
             }
-            catch 
-            { 
-                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error );            
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonHelp_DMS_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Таск 4 выполнил студент группы ИИПб-24-1 Дьяков Максик Сергеевич", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void buttonSave_DMS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask4.txt";
+                File.WriteAllText(path, textBoxResult_DMS.Text);
+
+                DialogResult dialogResult = MessageBox.Show("Файл" + path + "сохранен успешно!/n Открыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process txt = new System.Diagnostics.Process();
+                    txt.StartInfo.FileName = "notepad.exe";
+                    txt.StartInfo.Arguments = path;
+                    txt.Start();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Сбой при сохранении файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
