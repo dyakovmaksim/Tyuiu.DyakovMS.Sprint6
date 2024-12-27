@@ -198,6 +198,7 @@
             Controls.Add(groupBoxValue_DMS);
             Controls.Add(groupBoxTask_DMS);
             Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             groupBoxTask_DMS.ResumeLayout(false);
             groupBoxTask_DMS.PerformLayout();
