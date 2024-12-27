@@ -6,7 +6,22 @@ namespace Tyuiu.DyakovMS.Sprint6.Task6.V22.Lib
     {
         public string CollectTextFromFile(string path)
         {
-            throw new NotImplementedException();
+            string result = "";
+
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (!string.IsNullOrWhiteSpace(line))
+                    {
+                        string firstWord = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)[0];
+                        result += firstWord + " ";
+                    }
+                }
+            }
+
+            return result.Trim();
         }
     }
 }
